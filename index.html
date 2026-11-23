@@ -8,9 +8,23 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="M&W Salón">
+  <meta name="apple-mobile-web-app-title" content="Man and Women">
+
+  <!-- Vista previa al compartir el link en WhatsApp, Instagram y Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Centro Estético Man and Women">
+  <meta property="og:title" content="Centro Estético Man and Women | Reserva tu Cita">
+  <meta property="og:description" content="Agenda tu cita en línea 24/7 en Centro Estético Man and Women • Calle 34 #28-20, Barrio Santa Rita, Palmira.">
+  <meta property="og:image" content="https://manandwomen2026.github.io/man-and-women-app/logo.png">
+  <meta property="og:image:secure_url" content="https://manandwomen2026.github.io/man-and-women-app/logo.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:url" content="https://manandwomen2026.github.io/man-and-women-app/?reserva=1">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://manandwomen2026.github.io/man-and-women-app/logo.png">
+
   <link id="pwa-manifest-link" rel="manifest" href="">
-  <link id="pwa-icon-link" rel="icon" type="image/svg+xml" href="">
+  <link id="pwa-icon-link" rel="icon" type="image/png" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
 
   <!-- Google Fonts: Plus Jakarta Sans & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -123,9 +137,7 @@
   <div id="auth-gateway" class="fixed inset-0 z-[60] bg-navy-950 flex items-center justify-center p-4 overflow-y-auto">
     <div class="w-full max-w-md glass-card rounded-3xl p-6 sm:p-8 border border-gold-500/40 shadow-2xl space-y-6 my-auto">
       <div class="text-center space-y-2">
-        <div class="w-16 h-16 rounded-2xl gold-gradient mx-auto flex items-center justify-center shadow-lg shadow-gold-500/25">
-          <span class="font-display font-extrabold text-navy-950 text-2xl tracking-tighter">M&W</span>
-        </div>
+        <img src="logo.png" onerror="this.src='https://placehold.co/160x160/071326/D4AF37?text=M%26W'" alt="Logo Centro Estético Man and Women" class="w-24 h-24 rounded-2xl object-contain bg-black border border-gold-500/40 p-1.5 mx-auto shadow-lg shadow-gold-500/25">
         <span class="text-[10px] font-bold uppercase tracking-[0.25em] text-gold-400 block">Sistema Integral & AgendaPro</span>
         <h1 class="font-display font-extrabold text-2xl text-white">Centro Estético Man and Women</h1>
         <p class="text-xs text-slate-400">Ingresa con tu usuario administrativo o de colaborador</p>
@@ -186,7 +198,7 @@
   <!-- CLIENT-ONLY PUBLIC PORTAL BANNER -->
   <div id="client-only-topbar" class="hidden w-full bg-navy-950 border-b border-gold-500/30 px-4 py-3 flex items-center justify-between">
     <div class="flex items-center gap-2.5">
-      <img src="logo.jpg" onerror="this.src='https://placehold.co/80x80/071326/D4AF37?text=M%26W'" alt="Logo Centro Estético Man and Women" class="w-10 h-10 rounded-xl object-contain bg-black border border-gold-500/30 p-0.5">
+      <img src="logo.png" onerror="this.src='https://placehold.co/80x80/071326/D4AF37?text=M%26W'" alt="Logo Centro Estético Man and Women" class="w-10 h-10 rounded-xl object-contain bg-black border border-gold-500/30 p-0.5">
       <div>
         <span class="font-display font-bold text-sm text-white block leading-tight">MAN AND WOMEN</span>
         <span class="text-[10px] text-gold-400">Portal Oficial de Reservas • Palmira</span>
@@ -197,7 +209,7 @@
   <!-- MOBILE TOP HEADER -->
   <header id="app-mobile-header" class="lg:hidden sticky top-0 z-30 bg-navy-950/90 backdrop-blur-md border-b border-gold-500/25 px-4 py-3 flex items-center justify-between">
     <div class="flex items-center gap-3">
-      <img src="logo.jpg" onerror="this.src='https://placehold.co/80x80/071326/D4AF37?text=M%26W'" alt="Logo Centro Estético Man and Women" class="w-10 h-10 rounded-xl object-contain bg-black border border-gold-500/30 p-0.5 shadow-lg shadow-gold-500/20">
+      <img src="logo.png" onerror="this.src='https://placehold.co/80x80/071326/D4AF37?text=M%26W'" alt="Logo Centro Estético Man and Women" class="w-10 h-10 rounded-xl object-contain bg-black border border-gold-500/30 p-0.5 shadow-lg shadow-gold-500/20">
       <div>
         <h1 class="font-display font-bold text-sm tracking-wide text-white leading-tight">MAN AND WOMEN</h1>
         <p id="mobile-user-badge" class="text-[11px] text-gold-400 font-medium">Admin • Centro Estético</p>
@@ -217,7 +229,7 @@
   <!-- DESKTOP SIDEBAR -->
   <aside id="app-desktop-sidebar" class="hidden lg:flex lg:w-72 lg:flex-col lg:fixed lg:inset-y-0 bg-navy-950 border-r border-gold-500/20 z-30">
     <div class="p-6 border-b border-gold-500/20 flex items-center gap-3.5">
-      <img src="logo.jpg" onerror="this.src='https://placehold.co/96x96/071326/D4AF37?text=M%26W'" alt="Logo Centro Estético Man and Women" class="w-12 h-12 rounded-2xl object-contain bg-black border border-gold-500/30 p-1 shadow-lg shadow-gold-500/20 shrink-0">
+      <img src="logo.png" onerror="this.src='https://placehold.co/96x96/071326/D4AF37?text=M%26W'" alt="Logo Centro Estético Man and Women" class="w-12 h-12 rounded-2xl object-contain bg-black border border-gold-500/30 p-1 shadow-lg shadow-gold-500/20 shrink-0">
       <div>
         <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-gold-400 block">Centro Estético</span>
         <h1 class="font-display font-extrabold text-lg text-white leading-tight">MAN AND WOMEN</h1>
@@ -333,6 +345,9 @@
             </label>
             <button onclick="startNewMonthClean()" class="px-3.5 py-2 rounded-xl bg-amber-500/15 hover:bg-amber-500/25 border border-amber-500/40 text-xs font-semibold text-amber-300 flex items-center gap-1.5 transition" title="Limpiar movimientos del mes para iniciar un mes nuevo">
               <i data-lucide="calendar-plus" class="w-4 h-4"></i> Nuevo Mes
+            </button>
+            <button onclick="openClearAllDBModal()" class="px-3.5 py-2 rounded-xl bg-rose-500/15 hover:bg-rose-500/25 border border-rose-500/40 text-xs font-semibold text-rose-300 flex items-center gap-1.5 transition" title="Dejar toda la base de datos vacía para cargar datos desde Google Sheets">
+              <i data-lucide="trash-2" class="w-4 h-4"></i> Vaciar Base de Datos
             </button>
             <button onclick="switchTab('agenda')" class="px-3.5 py-2 rounded-xl bg-navy-700 hover:bg-navy-600 text-xs font-semibold text-white flex items-center gap-1.5 transition">
               <i data-lucide="calendar-plus" class="w-4 h-4 text-gold-400"></i> Agendar Cita
@@ -619,7 +634,7 @@
         <div id="agenda-client-view" class="hidden max-w-2xl mx-auto">
           <div class="glass-card rounded-3xl overflow-hidden border-2 border-gold-500/40 shadow-2xl">
             <div class="bg-navy-950 p-6 text-center border-b border-gold-500/25">
-              <img src="logo.jpg" onerror="this.src='https://placehold.co/160x160/071326/D4AF37?text=M%26W'" alt="Centro Estético Man and Women" class="w-24 h-24 rounded-2xl object-contain bg-black border border-gold-500/30 p-1.5 mx-auto shadow-lg shadow-gold-500/30 mb-3">
+              <img src="logo.png" onerror="this.src='https://placehold.co/160x160/071326/D4AF37?text=M%26W'" alt="Centro Estético Man and Women" class="w-24 h-24 rounded-2xl object-contain bg-black border border-gold-500/30 p-1.5 mx-auto shadow-lg shadow-gold-500/30 mb-3">
               <span class="text-[11px] font-bold uppercase tracking-[0.25em] text-gold-400">Reserva Online 24/7</span>
               <h3 class="font-display font-extrabold text-2xl text-white mt-1">Centro Estético Man and Women</h3>
               <p class="text-xs text-slate-400 mt-1">Calle 34 #28-20, Barrio Santa Rita, Palmira • Lun–Sáb 9:00 AM - 6:00 PM</p>
@@ -639,7 +654,7 @@
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label class="text-xs font-bold uppercase tracking-wider text-gold-400 block mb-1.5">2. Selecciona el Servicio</label>
-                  <select id="client-service-select" onchange="updateClientBookingPreview()" required class="w-full bg-navy-950 border border-slate-700 rounded-xl px-3.5 py-3 text-sm text-white focus:border-gold-500 focus:outline-none"></select>
+                  <select id="client-service-select" onchange="updateClientBookingPreview(); refreshClientAvailableSlots();" required class="w-full bg-navy-950 border border-slate-700 rounded-xl px-3.5 py-3 text-sm text-white focus:border-gold-500 focus:outline-none"></select>
                 </div>
                 <div>
                   <label class="text-xs font-bold uppercase tracking-wider text-gold-400 block mb-1.5">3. Especialista</label>
@@ -647,14 +662,18 @@
                 </div>
               </div>
 
-              <div id="client-service-card" class="p-3.5 rounded-2xl bg-navy-950/90 border border-gold-500/25 flex items-center justify-between text-xs">
+              <div id="client-service-card" class="p-3.5 rounded-2xl bg-navy-950/90 border border-gold-500/25 flex items-center justify-between gap-3 text-xs">
                 <div>
                   <p id="client-srv-desc" class="text-slate-300">Selecciona un servicio para ver duración y tarifa.</p>
                   <span id="client-srv-duration" class="text-gold-400 font-semibold mt-1 inline-block">Duración: 45 min</span>
                 </div>
-                <div class="text-right shrink-0 ml-3">
-                  <span class="text-[10px] text-slate-400 block uppercase">Inversión</span>
-                  <strong id="client-srv-price" class="font-display font-extrabold text-lg text-gold-400">$ 0</strong>
+                <div class="text-right shrink-0 ml-2">
+                  <label for="client-srv-price-input" class="text-[10px] text-slate-400 block uppercase mb-1">Inversión ($)</label>
+                  <div class="flex items-center justify-end gap-1">
+                    <span class="font-display font-extrabold text-base text-gold-400">$</span>
+                    <input type="number" id="client-srv-price-input" min="0" step="1000" required class="w-28 bg-navy-900 border border-gold-500/40 rounded-xl px-2.5 py-1.5 text-right font-display font-extrabold text-base text-gold-400 focus:border-gold-400 focus:outline-none">
+                  </div>
+                  <span id="client-price-edit-hint" class="text-[9px] text-slate-400 block mt-0.5">Tarifa editable por admin</span>
                 </div>
               </div>
 
@@ -1212,13 +1231,13 @@
           </div>
           <div>
             <label class="text-xs font-semibold text-slate-300 block mb-1">Servicio</label>
-            <select id="apt-service" onchange="syncAdminAptPrice()" class="w-full bg-navy-950 border border-slate-700 rounded-xl px-3 py-2.5 text-xs text-white"></select>
+            <select id="apt-service" onchange="syncAdminAptPrice(); refreshAdminAvailableSlots();" class="w-full bg-navy-950 border border-slate-700 rounded-xl px-3 py-2.5 text-xs text-white"></select>
           </div>
         </div>
         <div class="grid grid-cols-2 gap-3">
           <div>
-            <label class="text-xs font-semibold text-slate-300 block mb-1">Valor ($)</label>
-            <input type="number" id="apt-value" required class="w-full bg-navy-950 border border-slate-700 rounded-xl px-3 py-2.5 text-xs text-white">
+            <label class="text-xs font-semibold text-slate-300 block mb-1">Inversión / Valor ($)</label>
+            <input type="number" id="apt-value" min="0" step="1000" required class="w-full bg-navy-950 border border-gold-500/40 rounded-xl px-3 py-2.5 text-xs text-gold-300 font-bold">
           </div>
           <div>
             <label class="text-xs font-semibold text-slate-300 block mb-1">Estado Inicial</label>
@@ -1443,25 +1462,39 @@
             <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" id="perm-reportes" class="accent-amber-400"> Reportes PDF & P&L</label>
             <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" id="perm-usuarios" class="accent-amber-400"> Gestión de Usuarios</label>
           </div>
-          <div class="pt-2 border-t border-slate-800">
-            <label class="flex items-center gap-2 cursor-pointer text-xs text-amber-300 font-semibold">
-              <input type="checkbox" id="perm-only-own-agenda" class="accent-amber-400">
-              <span>Restringir Agenda y Comisiones solo a sus propios servicios</span>
-            </label>
-          </div>
-          <div class="pt-2 border-t border-slate-800">
-            <label class="flex items-center gap-2 cursor-pointer text-xs text-rose-300 font-semibold">
-              <input type="checkbox" id="perm-read-only" class="accent-rose-400">
-              <span>Modo Solo Lectura (Prohibir crear, editar, borrar, cobrar o arrastrar)</span>
-            </label>
+          <div class="pt-2 border-t border-slate-800 space-y-2 text-xs text-slate-200">
+            <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" id="perm-only-own-agenda" checked class="accent-amber-400"> Mostrar únicamente sus propias citas y comisiones</label>
+            <label class="flex items-center gap-2 cursor-pointer text-rose-300 font-semibold"><input type="checkbox" id="perm-read-only" checked class="accent-rose-500"> Modo Solo Lectura (Prohibido editar, crear, borrar o cobrar)</label>
           </div>
         </div>
 
         <div class="flex justify-end gap-2 pt-2">
-          <button type="button" onclick="closeModal('modal-user')" class="px-4 py-2 rounded-xl bg-navy-800 text-xs font-semibold text-slate-300">Cancelar</button>
+          <button type="button" onclick="closeModal('modal-user')" class="px-4 py-2 rounded-xl bg-navy-800 text-xs text-slate-300">Cancelar</button>
           <button type="submit" class="px-5 py-2 rounded-xl gold-gradient text-navy-950 font-bold text-xs">Guardar Usuario</button>
         </div>
       </form>
+    </div>
+  </div>
+
+  <!-- MODAL 9: CONFIRM CLEAR ALL DATABASE -->
+  <div id="modal-clear-db" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-navy-900 border border-rose-500/50 rounded-3xl w-full max-w-md p-6 space-y-4 shadow-2xl">
+      <div class="flex items-center gap-3 text-rose-400">
+        <div class="p-2.5 rounded-xl bg-rose-500/15 border border-rose-500/30">
+          <i data-lucide="alert-triangle" class="w-6 h-6"></i>
+        </div>
+        <h3 class="font-display font-bold text-lg text-white">Vaciar Toda la Base de Datos</h3>
+      </div>
+      <p class="text-xs text-slate-300 leading-relaxed">
+        Esta acción eliminará todas las <strong>citas agendadas, ingresos, movimientos diarios, gastos fijos, inventario y saldos acumulados</strong>, dejando la aplicación completamente en blanco lista para importar tus datos reales desde Google Sheets.
+      </p>
+      <p class="text-[11px] text-amber-300 bg-amber-500/10 border border-amber-500/30 rounded-xl p-2.5">
+        Se conservarán tus usuarios, contraseñas, catálogo de servicios y la lista base de colaboradores (en $0).
+      </p>
+      <div class="flex justify-end gap-2 pt-2">
+        <button type="button" onclick="closeModal('modal-clear-db')" class="px-4 py-2.5 rounded-xl bg-navy-800 text-xs font-semibold text-slate-300">Cancelar</button>
+        <button type="button" onclick="confirmClearAllDatabase()" class="px-5 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-500 text-white font-bold text-xs shadow-lg shadow-rose-500/20">Sí, Dejar Base en Blanco</button>
+      </div>
     </div>
   </div>
 
@@ -1745,22 +1778,21 @@
     }
 
     function setupPWAManifest() {
-      const svgIcon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#F3D06B"/><stop offset="50%" stop-color="#D4AF37"/><stop offset="100%" stop-color="#AA841D"/></linearGradient></defs><rect width="512" height="512" rx="112" fill="#071326"/><rect x="24" y="24" width="464" height="464" rx="92" fill="url(#g)"/><text x="256" y="305" font-family="sans-serif" font-weight="900" font-size="185" fill="#040B16" text-anchor="middle" letter-spacing="-8">M&amp;W</text></svg>`;
-      const iconDataUrl = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgIcon);
-      const iconLink = document.getElementById('pwa-icon-link');
-      if (iconLink) iconLink.href = iconDataUrl;
+      const baseUrl = window.location.href.split('?')[0].split('#')[0];
+      const baseDir = baseUrl.substring(0, baseUrl.lastIndexOf('/') + 1);
+      const logoUrl = baseDir + 'logo.png';
 
       const manifest = {
         name: 'Centro Estético Man and Women',
-        short_name: 'M&W Salón',
+        short_name: 'Man & Women',
         description: 'Dashboard Financiero, AgendaPro y Reservas - Centro Estético Man and Women Palmira',
-        start_url: window.location.href.split('?')[0],
+        start_url: baseUrl,
         display: 'standalone',
         background_color: '#040B16',
         theme_color: '#071326',
         icons: [
-          { src: iconDataUrl, sizes: '192x192', type: 'image/svg+xml', purpose: 'any maskable' },
-          { src: iconDataUrl, sizes: '512x512', type: 'image/svg+xml', purpose: 'any maskable' }
+          { src: logoUrl, sizes: '192x192', type: 'image/png', purpose: 'any maskable' },
+          { src: logoUrl, sizes: '512x512', type: 'image/png', purpose: 'any maskable' }
         ]
       };
       const manifestBlob = new Blob([JSON.stringify(manifest)], { type: 'application/manifest+json' });
@@ -2578,7 +2610,7 @@
 
       const srvSelect = document.getElementById('client-service-select');
       const zoneServices = state.services.filter(s => s.zone === zone);
-      srvSelect.innerHTML = zoneServices.map(s => `<option value="${s.id}">${s.name} — ${formatCOP(s.price)}</option>`).join('');
+      srvSelect.innerHTML = zoneServices.map(s => `<option value="${s.id}">${s.name}</option>`).join('');
 
       const profSelect = document.getElementById('client-prof-select');
       const zoneProfs = state.collaborators.filter(c => c.role === zone);
@@ -2595,23 +2627,74 @@
       if (!srv) return;
       document.getElementById('client-srv-desc').textContent = srv.desc || 'Servicio profesional en Centro Estético Man and Women.';
       document.getElementById('client-srv-duration').textContent = `Duración estimada: ${srv.duration} min`;
-      document.getElementById('client-srv-price').textContent = formatCOP(srv.price);
+
+      const priceInput = document.getElementById('client-srv-price-input');
+      const hintEl = document.getElementById('client-price-edit-hint');
+      const isPublicClient = document.body.classList.contains('client-booking-locked') || !currentUser || isReadOnlyUser();
+      if (priceInput) {
+        priceInput.value = Number(srv.price || 0);
+        priceInput.readOnly = isPublicClient;
+        priceInput.classList.toggle('cursor-not-allowed', isPublicClient);
+      }
+      if (hintEl) {
+        hintEl.textContent = isPublicClient ? 'Tarifa oficial del servicio' : 'Puedes modificar la inversión';
+      }
+    }
+
+    function timeToMinutes(hhmm) {
+      const [h, m] = String(hhmm || '09:00').split(':').map(Number);
+      return (h * 60) + (m || 0);
+    }
+
+    function getServiceDurationMinutes(serviceName, serviceId = null) {
+      if (serviceId) {
+        const byId = state.services.find(s => s.id === serviceId);
+        if (byId && byId.duration) return Number(byId.duration);
+      }
+      const byName = state.services.find(s => s.name.toUpperCase() === String(serviceName || '').toUpperCase());
+      return byName && byName.duration ? Number(byName.duration) : 60;
+    }
+
+    function getAvailableSlotsForBooking(dateVal, profVal, requestedDurationMin) {
+      const allSlots = [
+        '09:00', '09:30', '10:00', '10:30', '11:00', '11:30',
+        '12:00', '12:30', '13:00', '13:30', '14:00', '14:30',
+        '15:00', '15:30', '16:00', '16:30', '17:00', '17:30'
+      ];
+      const closingMin = 18 * 60; // 6:00 PM cierre del salón
+      const duration = Math.max(15, Number(requestedDurationMin) || 60);
+
+      // Intervalos ocupados por citas ya agendadas ese día con ese profesional
+      const busyIntervals = state.appointments
+        .filter(a => a.date === dateVal && a.prof === profVal && a.status !== 'Cancelado')
+        .map(a => {
+          const start = timeToMinutes(a.time);
+          const aptDur = Number(a.duration) || getServiceDurationMinutes(a.service);
+          return { start, end: start + aptDur };
+        });
+
+      return allSlots.filter(slot => {
+        const candidateStart = timeToMinutes(slot);
+        const candidateEnd = candidateStart + duration;
+        if (candidateEnd > closingMin) return false;
+        const overlaps = busyIntervals.some(b => candidateStart < b.end && candidateEnd > b.start);
+        return !overlaps;
+      });
     }
 
     function refreshClientAvailableSlots() {
       const dateVal = document.getElementById('client-date-input').value;
       const profVal = document.getElementById('client-prof-select').value;
-      const allSlots = ['09:00', '09:30', '10:00', '10:30', '11:00', '11:30', '14:00', '14:30', '15:00', '15:30', '16:00', '16:30', '17:00'];
-
-      const taken = state.appointments
-        .filter(a => a.date === dateVal && a.prof === profVal && a.status !== 'Cancelado')
-        .map(a => a.time);
+      const srvId = document.getElementById('client-service-select').value;
+      const duration = getServiceDurationMinutes(null, srvId);
+      const available = getAvailableSlotsForBooking(dateVal, profVal, duration);
 
       const timeSelect = document.getElementById('client-time-select');
-      timeSelect.innerHTML = allSlots.map(slot => {
-        const isTaken = taken.includes(slot);
-        return `<option value="${slot}" ${isTaken ? 'disabled' : ''}>${slot} ${isTaken ? '(Ocupado)' : '— Disponible'}</option>`;
-      }).join('');
+      if (!available.length) {
+        timeSelect.innerHTML = `<option value="">Sin horarios disponibles para ${duration} min</option>`;
+        return;
+      }
+      timeSelect.innerHTML = available.map(slot => `<option value="${slot}">${slot} — Disponible</option>`).join('');
     }
 
     function submitPublicBooking(e) {
@@ -2623,9 +2706,14 @@
       const timeVal = document.getElementById('client-time-select').value;
       const clientName = document.getElementById('client-name-input').value.trim();
       const clientPhone = document.getElementById('client-phone-input').value.trim();
+      const priceInput = document.getElementById('client-srv-price-input');
+      const isPublicClient = document.body.classList.contains('client-booking-locked') || !currentUser || isReadOnlyUser();
+      const finalPrice = (!isPublicClient && priceInput && Number(priceInput.value) > 0)
+        ? Number(priceInput.value)
+        : Number(srv ? srv.price : 0);
 
       if (!srv || !timeVal) {
-        showToast('Selecciona un horario disponible', 'error');
+        showToast('No hay horario disponible para la duración de este servicio', 'error');
         return;
       }
 
@@ -2634,6 +2722,7 @@
         status: 'Confirmado',
         date: dateVal,
         time: timeVal,
+        duration: Number(srv.duration || 60),
         client: clientName,
         source: 'Link Público',
         phone: clientPhone,
@@ -2641,7 +2730,7 @@
         prof: prof,
         service: srv.name,
         method: '',
-        value: Number(srv.price)
+        value: finalPrice
       };
 
       state.appointments.unshift(newApt);
@@ -2653,7 +2742,7 @@
       selectClientZone(currentClientZone);
       showToast(`¡Cita agendada para ${clientName} con ${prof}!`);
 
-      const waText = encodeURIComponent(`Hola Centro Estético Man and Women, acabo de agendar mi cita:\n• *Cliente:* ${clientName}\n• *Servicio:* ${srv.name}\n• *Especialista:* ${prof}\n• *Fecha:* ${dateVal} a las ${timeVal}\n• *Valor:* ${formatCOP(srv.price)}`);
+      const waText = encodeURIComponent(`Hola Centro Estético Man and Women, acabo de agendar mi cita:\n• *Cliente:* ${clientName}\n• *Servicio:* ${srv.name}\n• *Especialista:* ${prof}\n• *Fecha:* ${dateVal} a las ${timeVal}\n• *Inversión:* ${formatCOP(finalPrice)}`);
       window.open(`https://wa.me/573104073119?text=${waText}`, '_blank');
     }
 
@@ -2666,7 +2755,9 @@
       const profSel = document.getElementById('apt-prof');
       profSel.innerHTML = state.collaborators.map(c => `<option value="${c.alias}">${c.alias} (${c.role})</option>`).join('');
 
-      document.getElementById('apt-date').value = gcalFocusDate || '2026-11-23';
+      const dateInput = document.getElementById('apt-date');
+      dateInput.value = gcalFocusDate || '2026-11-23';
+      dateInput.onchange = refreshAdminAvailableSlots;
       filterAdminServicesByProf();
       document.getElementById('modal-appointment').classList.remove('hidden');
     }
@@ -2676,7 +2767,6 @@
       const collab = state.collaborators.find(c => c.alias === profAlias);
       const targetRole = collab ? collab.role : null;
 
-      // Filtrar servicios que correspondan al área del profesional (o asignados directamente a él)
       let filteredServices = state.services.filter(s => {
         if (targetRole && s.zone === targetRole) return true;
         return s.prof === profAlias;
@@ -2687,8 +2777,24 @@
       }
 
       const srvSel = document.getElementById('apt-service');
-      srvSel.innerHTML = filteredServices.map(s => `<option value="${s.id}">${s.name} (${formatCOP(s.price)})</option>`).join('');
+      srvSel.innerHTML = filteredServices.map(s => `<option value="${s.id}">${s.name}</option>`).join('');
       syncAdminAptPrice();
+      refreshAdminAvailableSlots();
+    }
+
+    function refreshAdminAvailableSlots() {
+      const dateVal = document.getElementById('apt-date').value;
+      const profVal = document.getElementById('apt-prof').value;
+      const srvId = document.getElementById('apt-service').value;
+      const duration = getServiceDurationMinutes(null, srvId);
+      const available = getAvailableSlotsForBooking(dateVal, profVal, duration);
+      const timeSel = document.getElementById('apt-time');
+      if (!timeSel) return;
+      if (!available.length) {
+        timeSel.innerHTML = `<option value="">Sin horarios disponibles (${duration} min)</option>`;
+        return;
+      }
+      timeSel.innerHTML = available.map(slot => `<option value="${slot}">${slot}</option>`).join('');
     }
 
     function syncAdminAptPrice() {
@@ -2706,12 +2812,19 @@
       const collab = state.collaborators.find(c => c.alias === profAlias);
       const status = document.getElementById('apt-status').value;
       const val = Number(document.getElementById('apt-value').value);
+      const timeVal = document.getElementById('apt-time').value;
+
+      if (!timeVal) {
+        showToast('Selecciona un horario disponible para este servicio', 'error');
+        return;
+      }
 
       const apt = {
         id: 'apt-' + Date.now(),
         status: status,
         date: document.getElementById('apt-date').value,
-        time: document.getElementById('apt-time').value,
+        time: timeVal,
+        duration: Number(srv ? srv.duration : 60),
         client: document.getElementById('apt-client').value.trim(),
         source: document.getElementById('apt-source').value,
         phone: document.getElementById('apt-phone').value.trim(),
@@ -3830,16 +3943,56 @@
       showToast('Movimientos del mes limpiados para iniciar un nuevo periodo');
     }
 
+    function openClearAllDBModal() {
+      if (!guardCanEdit()) return;
+      document.getElementById('modal-clear-db').classList.remove('hidden');
+      if (window.lucide) lucide.createIcons();
+    }
+
+    // Vaciar toda la base de datos operativa para empezar a pasar la información real desde Google Sheets
+    function confirmClearAllDatabase() {
+      if (!guardCanEdit()) return;
+      state.baseMetrics = {
+        ingresos: 0,
+        paidCount: 0,
+        productosSales: 0,
+        efectivo: 0,
+        transferencia: 0,
+        gastosOperativos: 0
+      };
+      state.appointments = [];
+      state.dailyExpenses = [];
+      state.fixedExpenses = [];
+      state.inventory = [];
+      state.collaborators = state.collaborators.map(c => ({
+        ...c,
+        servicesCount: 0,
+        generatedIncome: 0,
+        commTotal: 0,
+        delivered: 0,
+        loanBalance: 0
+      }));
+      closeModal('modal-clear-db');
+      saveState();
+      showToast('Base de datos vaciada por completo. Lista para cargar datos de Google Sheets');
+    }
+
+    // Renderizar todos los módulos activos de la interfaz
     function renderAll() {
-      renderDashboard();
-      renderGoogleCalendar();
-      renderAgenda();
-      renderServices();
-      renderCollaborators();
-      renderExpenses();
-      renderInventory();
-      renderReportPreview();
-      renderUsersAdmin();
+      try {
+        renderDashboard();
+        renderAgenda();
+        renderGoogleCalendar();
+        renderServices();
+        renderCollaborators();
+        renderExpenses();
+        renderInventory();
+        renderUsersAdmin();
+        if (currentTab === 'reportes') renderReportPreview();
+        if (window.lucide) lucide.createIcons();
+      } catch (err) {
+        console.error('Error en renderAll:', err);
+      }
     }
 
     window.addEventListener('DOMContentLoaded', async () => {
