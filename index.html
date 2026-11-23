@@ -175,15 +175,6 @@
 
       <!-- Quick Demo Access Pills -->
       <div class="pt-3 border-t border-slate-800 space-y-2.5">
-        <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block text-center">Accesos Rápidos de Prueba</span>
-        <div class="grid grid-cols-2 gap-2">
-          <button type="button" onclick="quickFillLogin('admin', '2026')" class="py-2 px-3 rounded-xl bg-navy-900 hover:bg-navy-800 border border-gold-500/40 text-gold-300 text-[11px] font-bold transition">
-            Admin Total (2026)
-          </button>
-          <button type="button" onclick="quickFillLogin('rochy', '1234')" class="py-2 px-3 rounded-xl bg-navy-900 hover:bg-navy-800 border border-slate-700 text-slate-200 text-[11px] font-semibold transition">
-            Colaborador Rochy (1234)
-          </button>
-        </div>
         <button type="button" onclick="activateClientOnlyMode()" class="w-full py-2.5 rounded-xl bg-emerald-600/15 hover:bg-emerald-600/25 border border-emerald-500/40 text-emerald-300 text-xs font-bold flex items-center justify-center gap-2 transition">
           <i data-lucide="calendar-heart" class="w-4 h-4"></i>
           <span>Abrir Portal Público de Clientes (?reserva=1)</span>
@@ -195,24 +186,18 @@
   <!-- CLIENT-ONLY PUBLIC PORTAL BANNER -->
   <div id="client-only-topbar" class="hidden w-full bg-navy-950 border-b border-gold-500/30 px-4 py-3 flex items-center justify-between">
     <div class="flex items-center gap-2.5">
-      <div class="w-9 h-9 rounded-xl gold-gradient flex items-center justify-center font-display font-extrabold text-navy-950 text-sm">M&W</div>
+      <img src="logo.jpg" onerror="this.src='https://placehold.co/80x80/071326/D4AF37?text=M%26W'" alt="Logo Centro Estético Man and Women" class="w-10 h-10 rounded-xl object-contain bg-black border border-gold-500/30 p-0.5">
       <div>
         <span class="font-display font-bold text-sm text-white block leading-tight">MAN AND WOMEN</span>
         <span class="text-[10px] text-gold-400">Portal Oficial de Reservas • Palmira</span>
       </div>
     </div>
-    <button onclick="exitClientOnlyMode()" class="px-3 py-1.5 rounded-xl bg-navy-800 hover:bg-navy-700 border border-slate-700 text-[11px] text-slate-300 font-semibold flex items-center gap-1.5">
-      <i data-lucide="shield" class="w-3.5 h-3.5 text-gold-400"></i>
-      <span>Acceso Equipo</span>
-    </button>
   </div>
 
   <!-- MOBILE TOP HEADER -->
   <header id="app-mobile-header" class="lg:hidden sticky top-0 z-30 bg-navy-950/90 backdrop-blur-md border-b border-gold-500/25 px-4 py-3 flex items-center justify-between">
     <div class="flex items-center gap-3">
-      <div class="w-10 h-10 rounded-xl gold-gradient flex items-center justify-center shadow-lg shadow-gold-500/20">
-        <span class="font-display font-extrabold text-navy-950 text-base tracking-tighter">M&W</span>
-      </div>
+      <img src="logo.jpg" onerror="this.src='https://placehold.co/80x80/071326/D4AF37?text=M%26W'" alt="Logo Centro Estético Man and Women" class="w-10 h-10 rounded-xl object-contain bg-black border border-gold-500/30 p-0.5 shadow-lg shadow-gold-500/20">
       <div>
         <h1 class="font-display font-bold text-sm tracking-wide text-white leading-tight">MAN AND WOMEN</h1>
         <p id="mobile-user-badge" class="text-[11px] text-gold-400 font-medium">Admin • Centro Estético</p>
@@ -232,9 +217,7 @@
   <!-- DESKTOP SIDEBAR -->
   <aside id="app-desktop-sidebar" class="hidden lg:flex lg:w-72 lg:flex-col lg:fixed lg:inset-y-0 bg-navy-950 border-r border-gold-500/20 z-30">
     <div class="p-6 border-b border-gold-500/20 flex items-center gap-3.5">
-      <div class="w-12 h-12 rounded-2xl gold-gradient flex items-center justify-center shadow-lg shadow-gold-500/20 shrink-0">
-        <span class="font-display font-extrabold text-navy-950 text-lg tracking-tighter">M&W</span>
-      </div>
+      <img src="logo.jpg" onerror="this.src='https://placehold.co/96x96/071326/D4AF37?text=M%26W'" alt="Logo Centro Estético Man and Women" class="w-12 h-12 rounded-2xl object-contain bg-black border border-gold-500/30 p-1 shadow-lg shadow-gold-500/20 shrink-0">
       <div>
         <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-gold-400 block">Centro Estético</span>
         <h1 class="font-display font-extrabold text-lg text-white leading-tight">MAN AND WOMEN</h1>
@@ -337,6 +320,19 @@
           <div class="flex flex-wrap items-center gap-2">
             <button onclick="openReportCenterDirect('pnl')" class="px-3.5 py-2 rounded-xl bg-emerald-500/15 hover:bg-emerald-500/25 border border-emerald-500/40 text-xs font-semibold text-emerald-300 flex items-center gap-1.5 transition">
               <i data-lucide="file-down" class="w-4 h-4"></i> Exportar Estado Resultados
+            </button>
+            <button onclick="exportDataToExcelCSV()" class="px-3.5 py-2 rounded-xl bg-teal-500/15 hover:bg-teal-500/25 border border-teal-500/40 text-xs font-semibold text-teal-300 flex items-center gap-1.5 transition" title="Descargar datos en formato compatible con Excel">
+              <i data-lucide="file-spreadsheet" class="w-4 h-4"></i> Exportar Excel
+            </button>
+            <button onclick="exportBackupJSON()" class="px-3 py-2 rounded-xl bg-navy-800 hover:bg-navy-700 border border-slate-600 text-xs font-semibold text-slate-200 flex items-center gap-1.5 transition" title="Descargar copia de seguridad">
+              <i data-lucide="hard-drive-download" class="w-4 h-4 text-gold-400"></i> Respaldo
+            </button>
+            <label class="px-3.5 py-2 rounded-xl bg-navy-800 hover:bg-navy-700 border border-slate-600 text-xs font-semibold text-slate-200 flex items-center gap-1.5 transition cursor-pointer" title="Restaurar copia de seguridad">
+              <i data-lucide="hard-drive-upload" class="w-4 h-4 text-sky-400"></i> Restaurar
+              <input type="file" accept=".json" onchange="importBackupJSON(event)" class="hidden">
+            </label>
+            <button onclick="startNewMonthClean()" class="px-3.5 py-2 rounded-xl bg-amber-500/15 hover:bg-amber-500/25 border border-amber-500/40 text-xs font-semibold text-amber-300 flex items-center gap-1.5 transition" title="Limpiar movimientos del mes para iniciar un mes nuevo">
+              <i data-lucide="calendar-plus" class="w-4 h-4"></i> Nuevo Mes
             </button>
             <button onclick="switchTab('agenda')" class="px-3.5 py-2 rounded-xl bg-navy-700 hover:bg-navy-600 text-xs font-semibold text-white flex items-center gap-1.5 transition">
               <i data-lucide="calendar-plus" class="w-4 h-4 text-gold-400"></i> Agendar Cita
@@ -623,9 +619,7 @@
         <div id="agenda-client-view" class="hidden max-w-2xl mx-auto">
           <div class="glass-card rounded-3xl overflow-hidden border-2 border-gold-500/40 shadow-2xl">
             <div class="bg-navy-950 p-6 text-center border-b border-gold-500/25">
-              <div class="w-16 h-16 rounded-2xl gold-gradient mx-auto flex items-center justify-center shadow-lg shadow-gold-500/30 mb-3">
-                <span class="font-display font-extrabold text-navy-950 text-2xl">M&W</span>
-              </div>
+              <img src="logo.jpg" onerror="this.src='https://placehold.co/160x160/071326/D4AF37?text=M%26W'" alt="Centro Estético Man and Women" class="w-24 h-24 rounded-2xl object-contain bg-black border border-gold-500/30 p-1.5 mx-auto shadow-lg shadow-gold-500/30 mb-3">
               <span class="text-[11px] font-bold uppercase tracking-[0.25em] text-gold-400">Reserva Online 24/7</span>
               <h3 class="font-display font-extrabold text-2xl text-white mt-1">Centro Estético Man and Women</h3>
               <p class="text-xs text-slate-400 mt-1">Calle 34 #28-20, Barrio Santa Rita, Palmira • Lun–Sáb 9:00 AM - 6:00 PM</p>
@@ -1214,7 +1208,7 @@
         <div class="grid grid-cols-2 gap-3">
           <div>
             <label class="text-xs font-semibold text-slate-300 block mb-1">Profesional</label>
-            <select id="apt-prof" class="w-full bg-navy-950 border border-slate-700 rounded-xl px-3 py-2.5 text-xs text-white"></select>
+            <select id="apt-prof" onchange="filterAdminServicesByProf()" class="w-full bg-navy-950 border border-slate-700 rounded-xl px-3 py-2.5 text-xs text-white"></select>
           </div>
           <div>
             <label class="text-xs font-semibold text-slate-300 block mb-1">Servicio</label>
@@ -1838,6 +1832,7 @@
 
     function logoutUser() {
       saveSession(null);
+      document.body.classList.remove('client-booking-locked');
       document.getElementById('auth-gateway').classList.remove('hidden');
       document.getElementById('client-only-topbar').classList.add('hidden');
       if (window.lucide) lucide.createIcons();
@@ -1887,6 +1882,7 @@
     }
 
     function activateClientOnlyMode() {
+      document.body.classList.add('client-booking-locked');
       document.getElementById('auth-gateway').classList.add('hidden');
       document.getElementById('client-only-topbar').classList.remove('hidden');
       document.getElementById('app-desktop-sidebar').classList.add('hidden');
@@ -1899,14 +1895,20 @@
       document.getElementById('tab-agenda').classList.remove('hidden');
       document.getElementById('agenda-admin-view').classList.add('hidden');
       document.getElementById('agenda-client-view').classList.remove('hidden');
-      document.querySelector('#tab-agenda > div:first-child').classList.add('hidden');
+      const agendaSubHeader = document.querySelector('#tab-agenda > div:first-child');
+      if (agendaSubHeader) agendaSubHeader.classList.add('hidden');
 
       initClientBookingForm();
       if (window.lucide) lucide.createIcons();
     }
 
     function exitClientOnlyMode() {
-      document.querySelector('#tab-agenda > div:first-child').classList.remove('hidden');
+      if (document.body.classList.contains('client-booking-locked') || new URLSearchParams(window.location.search).get('reserva') === '1') {
+        activateClientOnlyMode();
+        return;
+      }
+      const agendaSubHeader = document.querySelector('#tab-agenda > div:first-child');
+      if (agendaSubHeader) agendaSubHeader.classList.remove('hidden');
       if (currentUser) {
         applySessionAccess();
       } else {
@@ -2664,12 +2666,29 @@
       const profSel = document.getElementById('apt-prof');
       profSel.innerHTML = state.collaborators.map(c => `<option value="${c.alias}">${c.alias} (${c.role})</option>`).join('');
 
-      const srvSel = document.getElementById('apt-service');
-      srvSel.innerHTML = state.services.map(s => `<option value="${s.id}">${s.name} (${formatCOP(s.price)})</option>`).join('');
-
       document.getElementById('apt-date').value = gcalFocusDate || '2026-11-23';
-      syncAdminAptPrice();
+      filterAdminServicesByProf();
       document.getElementById('modal-appointment').classList.remove('hidden');
+    }
+
+    function filterAdminServicesByProf() {
+      const profAlias = document.getElementById('apt-prof').value;
+      const collab = state.collaborators.find(c => c.alias === profAlias);
+      const targetRole = collab ? collab.role : null;
+
+      // Filtrar servicios que correspondan al área del profesional (o asignados directamente a él)
+      let filteredServices = state.services.filter(s => {
+        if (targetRole && s.zone === targetRole) return true;
+        return s.prof === profAlias;
+      });
+
+      if (!filteredServices.length) {
+        filteredServices = state.services;
+      }
+
+      const srvSel = document.getElementById('apt-service');
+      srvSel.innerHTML = filteredServices.map(s => `<option value="${s.id}">${s.name} (${formatCOP(s.price)})</option>`).join('');
+      syncAdminAptPrice();
     }
 
     function syncAdminAptPrice() {
@@ -2684,6 +2703,7 @@
       const srvId = document.getElementById('apt-service').value;
       const srv = state.services.find(s => s.id === srvId);
       const profAlias = document.getElementById('apt-prof').value;
+      const collab = state.collaborators.find(c => c.alias === profAlias);
       const status = document.getElementById('apt-status').value;
       const val = Number(document.getElementById('apt-value').value);
 
@@ -2695,7 +2715,7 @@
         client: document.getElementById('apt-client').value.trim(),
         source: document.getElementById('apt-source').value,
         phone: document.getElementById('apt-phone').value.trim(),
-        role: srv ? srv.zone : 'ESTILISTA',
+        role: collab ? collab.role : (srv ? srv.zone : 'ESTILISTA'),
         prof: profAlias,
         service: srv ? srv.name : 'SERVICIO SALÓN',
         method: status === 'Pago' ? 'EF' : '',
@@ -3676,6 +3696,140 @@
       });
     }
 
+    // Exportar citas, colaboradores, gastos e inventario a archivo CSV compatible con Excel
+    function exportDataToExcelCSV() {
+      try {
+        const sep = ';';
+        const rows = [];
+        rows.push(['SECCION', 'FECHA_HORA', 'CONCEPTO_CLIENTE', 'DETALLE_PROFESIONAL', 'ESTADO_MEDIO', 'VALOR_COP'].join(sep));
+
+        state.appointments.forEach(a => {
+          rows.push([
+            'CITA',
+            `${a.date} ${a.time}`,
+            `"${String(a.client || '').replace(/"/g, '""')}"`,
+            `"${String(a.service || '')} - ${String(a.prof || '')}"`,
+            `${a.status} ${a.method || ''}`.trim(),
+            Number(a.value || 0)
+          ].join(sep));
+        });
+
+        state.dailyExpenses.forEach(d => {
+          rows.push([
+            'GASTO_DIARIO',
+            d.date,
+            `"${String(d.desc || '').replace(/"/g, '""')}"`,
+            d.category,
+            `${d.flow} (${d.method})`,
+            d.flow === 'Sale' ? -Math.abs(Number(d.amount || 0)) : Math.abs(Number(d.amount || 0))
+          ].join(sep));
+        });
+
+        state.fixedExpenses.forEach(fx => {
+          rows.push([
+            'GASTO_FIJO',
+            fx.date,
+            `"${String(fx.desc || '').replace(/"/g, '""')}"`,
+            'PRESUPUESTO FIJO',
+            fx.status,
+            Number(fx.amount || 0)
+          ].join(sep));
+        });
+
+        state.collaborators.forEach(c => {
+          rows.push([
+            'COLABORADOR',
+            'LIQUIDACION',
+            `"${String(c.name || '').replace(/"/g, '""')}"`,
+            `${c.alias} (${c.role} ${c.pct}%)`,
+            `Faltante: ${Math.max(0, Number(c.commTotal || 0) - Number(c.delivered || 0))}`,
+            Number(c.commTotal || 0)
+          ].join(sep));
+        });
+
+        const csvContent = '\uFEFF' + rows.join('\r\n');
+        const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `ManAndWomen_Excel_${new Date().toISOString().slice(0, 10)}.csv`;
+        link.click();
+        URL.revokeObjectURL(url);
+        showToast('Archivo Excel (.CSV) exportado correctamente');
+      } catch (err) {
+        showToast('No se pudo exportar el archivo Excel', 'error');
+      }
+    }
+
+    // Descargar copia de seguridad completa en formato JSON
+    function exportBackupJSON() {
+      try {
+        const blob = new Blob([JSON.stringify(state, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = `Respaldo_ManAndWomen_${new Date().toISOString().slice(0, 10)}.json`;
+        link.click();
+        URL.revokeObjectURL(url);
+        showToast('Copia de seguridad (.JSON) descargada');
+      } catch (err) {
+        showToast('Error al crear el respaldo', 'error');
+      }
+    }
+
+    // Restaurar copia de seguridad JSON sin perder la sesión ni la estructura
+    function importBackupJSON(event) {
+      if (!guardCanEdit()) return;
+      const file = event.target.files && event.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        try {
+          const imported = JSON.parse(e.target.result);
+          if (!imported || typeof imported !== 'object' || !Array.isArray(imported.appointments)) {
+            showToast('El archivo de respaldo no es válido', 'error');
+            return;
+          }
+          state = {
+            ...JSON.parse(JSON.stringify(DEFAULT_STATE)),
+            ...imported,
+            users: Array.isArray(imported.users) && imported.users.length ? imported.users : state.users
+          };
+          saveState();
+          showToast('Respaldo restaurado con éxito');
+        } catch (err) {
+          showToast('Error al leer el archivo de respaldo', 'error');
+        }
+      };
+      reader.readAsText(file);
+      event.target.value = '';
+    }
+
+    // Limpiar movimientos mensuales para iniciar un nuevo mes manteniendo catálogo, equipo, inventario y usuarios
+    function startNewMonthClean() {
+      if (!guardCanEdit()) return;
+      state.baseMetrics = {
+        ingresos: 0,
+        paidCount: 0,
+        productosSales: 0,
+        efectivo: 0,
+        transferencia: 0,
+        gastosOperativos: 0
+      };
+      state.appointments = [];
+      state.dailyExpenses = [];
+      state.fixedExpenses = state.fixedExpenses.map(fx => ({ ...fx, status: 'NO PAGO' }));
+      state.collaborators = state.collaborators.map(c => ({
+        ...c,
+        servicesCount: 0,
+        generatedIncome: 0,
+        commTotal: 0,
+        delivered: 0
+      }));
+      saveState();
+      showToast('Movimientos del mes limpiados para iniciar un nuevo periodo');
+    }
+
     function renderAll() {
       renderDashboard();
       renderGoogleCalendar();
@@ -3698,6 +3852,7 @@
 
       const params = new URLSearchParams(window.location.search);
       if (params.get('reserva') === '1') {
+        saveSession(null);
         renderAll();
         activateClientOnlyMode();
         return;
